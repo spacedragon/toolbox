@@ -49,6 +49,13 @@ const tools: Tool[] = [
     status: 'available'
   },
   {
+    id: 'disk-lens', // This will be part of the URL: /tools/disk-lens
+    title: 'Disk Lens',
+    description: 'Analyze disk space usage, find large files and folders, and help with cleanup.',
+    icon: '💾', // Example icon, can be changed
+    status: 'available'
+  },
+  {
     id: 'regex-tester',
     title: 'Regex Tester',
     description: 'Test regular expressions with real-time matching and group extraction.',
