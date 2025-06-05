@@ -1,0 +1,27 @@
+{"timestamp":"2024-01-15T08:15:30.123Z","level":"info","message":"Application startup completed","service":"web-api","version":"2.1.4","port":8080,"pid":12345,"environment":"production","region":"us-east-1"}
+{"timestamp":"2024-01-15T08:15:31.234Z","level":"info","message":"Database connection established","service":"web-api","database":"postgresql","host":"db.example.com","connection_pool_size":20,"latency_ms":45,"ssl_enabled":true}
+{"timestamp":"2024-01-15T08:15:32.345Z","level":"warn","message":"High memory usage detected","service":"web-api","memory_usage_mb":1024,"threshold_mb":800,"file":"monitoring/memory.go","line":45,"cpu_usage":78.5,"load_average":2.3}
+{"timestamp":"2024-01-15T08:15:33.456Z","level":"error","message":"Failed to authenticate user","service":"auth-service","user_id":"user_98765","error":"Invalid JWT token","request_id":"req_abc123def456","file":"auth/jwt.go","line":78,"ip_address":"192.168.1.100","user_agent":"Chrome/120.0"}
+{"timestamp":"2024-01-15T08:15:34.567Z","level":"debug","message":"Cache operation completed","service":"cache-service","operation":"SET","key":"user:98765:profile","ttl_seconds":3600,"cache_hit_ratio":89.5,"cache_size_mb":256}
+{"timestamp":"2024-01-15T08:15:35.678Z","level":"fatal","message":"Critical system failure detected","service":"web-api","error":"Out of disk space","disk_usage_percent":98,"available_mb":50,"file":"system/disk.go","line":123,"action":"shutting_down","alert_sent":true}
+{"timestamp":"2024-01-15T08:15:36.789Z","level":"trace","message":"HTTP request processed","service":"api-gateway","method":"POST","path":"/api/v1/users","status_code":201,"response_time_ms":45,"request_size_bytes":1024,"response_size_bytes":512}
+{"timestamp":"2024-01-15T08:15:37.890Z","level":"info","message":"Scheduled job executed successfully","service":"background-worker","job_type":"data_cleanup","records_processed":15430,"duration_ms":2340,"next_run":"2024-01-16T08:15:37.890Z","success_rate":99.8}
+{"timestamp":"2024-01-15T08:15:38.901Z","level":"warn","message":"Rate limit approaching for API key","service":"rate-limiter","api_key":"ak_prod_123...789","current_requests":4800,"limit":5000,"window":"1h","file":"middleware/ratelimit.go","line":67,"client_id":"client_456"}
+{"timestamp":"2024-01-15T08:15:39.012Z","level":"error","message":"External service unavailable","service":"payment-service","external_service":"stripe-api","error":"Connection timeout","retry_count":3,"max_retries":5,"backoff_ms":2000,"file":"external/payment.go","line":156,"correlation_id":"pay_789xyz"}
+{"timestamp":"2024-01-15T08:15:40.123Z","level":"info","message":"User login successful","service":"auth-service","user_id":"user_12345","username":"john.doe","session_id":"sess_abc123","login_method":"oauth","provider":"google","location":"New York, US"}
+{"timestamp":"2024-01-15T08:15:41.234Z","level":"debug","message":"SQL query executed","service":"database-service","query":"SELECT * FROM users WHERE active = true","execution_time_ms":23,"rows_returned":1543,"query_id":"query_def456","connection_id":"conn_789"}
+
+2024-01-15 08:15:40 INFO [web-server] Server listening on port 8080
+2024-01-15 08:15:41 WARN [database] Connection pool exhausted, creating new connections
+2024-01-15 08:15:42 ERROR [auth-service] Login failed for user john.doe@example.com - invalid password
+2024-01-15 08:15:43 DEBUG [cache] Evicting expired keys: 234 keys removed
+Standard log entry without JSON structure - still displays properly
+Another plain text log entry
+Multi-line plain text entry
+that spans multiple lines
+and should be displayed correctly
+
+{"timestamp":"2024-01-15T08:15:44.123Z","level":"info","message":"Multi-line message example\nThis message contains line breaks\nand should be displayed properly\nwith each line on a separate row","service":"test-app","details":"Line 1\nLine 2\tIndented line\nLine 3"}
+{"timestamp":"2024-01-15T08:15:45.234Z","level":"warn","message":"Configuration validation warnings","service":"config-loader","warnings":["Missing optional field: timeout","Default value used for max_connections","Environment variable DB_PASSWORD not set"],"config_file":"/etc/app/config.yaml","line":23}
+{"timestamp":"2024-01-15T08:15:46.345Z","level":"info","message":"Batch processing completed","service":"data-processor","batch_id":"batch_20240115_001","total_records":50000,"processed":49950,"failed":50,"success_rate":99.9,"processing_time_seconds":125,"throughput_records_per_second":399.6}
+{"timestamp":"2024-01-15T08:15:47.456Z","level":"debug","message":"SQL query executed","service":"database","query":"SELECT u.id, u.name, p.title FROM users u JOIN profiles p ON u.id = p.user_id WHERE u.active = true AND u.created_at > $1","parameters":["2024-01-01T00:00:00Z"],"execution_time_ms":23,"rows_returned":1543,"file":"db/queries.go","line":89}
