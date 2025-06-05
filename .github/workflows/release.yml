@@ -84,7 +84,6 @@ jobs:
           releaseBody: "See the release assets for downloadable packages for this version."
           releaseDraft: true
           tauriScript: pnpm tauri
-          args: build
 
   publish-release:
     runs-on: ubuntu-latest
