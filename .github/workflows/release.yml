@@ -79,6 +79,7 @@ jobs:
         with:
           releaseId: ${{ needs.create-release.outputs.release_id }}
           tauriScript: pnpm tauri
+          args: build
 
   publish-release:
     runs-on: ubuntu-latest
