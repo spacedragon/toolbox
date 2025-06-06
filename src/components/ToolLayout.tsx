@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { ScrollArea } from '@/components/ui/scroll-area';
+
 
 
 interface ToolLayoutProps {
@@ -17,7 +19,7 @@ const ToolLayout: React.FC<ToolLayoutProps> = ({ toolName, description, children
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="w-full p-6">
+      <div className="max-w-7xl mx-auto w-full p-6">
         {/* Header */}
         <Card className="mb-6">
           <CardHeader>
@@ -53,9 +55,11 @@ const ToolLayout: React.FC<ToolLayoutProps> = ({ toolName, description, children
         <Separator className="mb-6" />
 
         {/* Tool Content */}
-        <div className="space-y-6">
-          {children}
-        </div>
+        <ScrollArea className="h-[calc(100vh-180px)]">
+          <div className="space-y-6 pr-4">
+            {children}
+          </div>
+        </ScrollArea>
       </div>
     </div>
   );
